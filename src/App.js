@@ -4,37 +4,37 @@ import React from 'react';
 import Nav from './components/Nav';
 import ManageFunds from './components/ManageFunds';
 import Trips from './components/Trips';
-import { BrowserRouter, Switch, Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
 
-  //   <BrowserRouter>
+    //   <BrowserRouter>
 
-  //   <Routes>
-  //     <Route path="/" element={<Nav/>}>
-  //       <Route path="expenses" element={<Trips/>} />
-  //       <Route path="invoices" element={<ManageFunds/>} />
-  //     </Route>
-  //   </Routes>
-  // </BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Nav/>}>
+    //       <Route path="expenses" element={<Trips/>} />
+    //       <Route path="invoices" element={<ManageFunds/>} />
+    //     </Route>
+    //   </Routes>
+    // </BrowserRouter>
 
-  
-<BrowserRouter>
+
+    <BrowserRouter>
       <div className="App">
-     
-      <Nav/>
-        <Routes>
-        <Route path = "/travel-app/Trips" element = {<Trips/>} />
-        <Route path = "/travel-app/ManageFunds" element = {<ManageFunds/>} />
-        </Routes>
 
+        <Nav />
+      
+          <Routes>
+            <Route path="/travel-app/Trips" element={<Trips />} />
+            <Route path="/travel-app/ManageFunds" element={<ManageFunds />} />
+          </Routes>
       </div>
     </BrowserRouter>
 
 
-    
+
   );
 }
 

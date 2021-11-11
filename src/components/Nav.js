@@ -5,16 +5,19 @@ import logo from '../images/logo.JPG';
 function Nav() {
 
 
-    let navStyle = {
+    const navStyle = {
         fontSize : '24px',
         fontWeight : 'bold',
         textDecoration: 'none'
       }
 
+    const logoStyle =   {height : '8.5vh'}
+      
+
     return (
         <nav>
      
-            <img style = {{height : '8.5vh'}} src = {logo} />
+            <img style = {logoStyle} src = {logo} />
             <ul className="navlinks">
                  <Link style = {navStyle}  to = "/travel-app/Trips" > 
                 <li> Trips</li>

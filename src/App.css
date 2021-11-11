@@ -8,9 +8,13 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 8.5vh;
-  background-color: rgb(172, 250, 93);
+  background-color: rgba(241, 251, 252, 1);
+  border-bottom: 2px solid black;
+  
 
 }
+
+
 
 
 .navlinks{

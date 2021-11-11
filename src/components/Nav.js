@@ -1,21 +1,31 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import logo from '../images/logo.JPG';
 
 function Nav() {
+
+
+    let navStyle = {
+        fontSize : '24px',
+        fontWeight : 'bold',
+        textDecoration: 'none'
+      }
+
     return (
         <nav>
-            <h3> The travellers </h3>
+     
+            <img style = {{height : '8.5vh'}} src = {logo} />
             <ul className="navlinks">
-                 <Link to = "/travel-app/Trips" > 
+                 <Link style = {navStyle}  to = "/travel-app/Trips" > 
                 <li> Trips</li>
                 </Link>
 
-                <Link to = "/travel-app/ManageFunds"> 
+                <Link style = {navStyle}  to = "/travel-app/ManageFunds"> 
                 <li> ManageFunds</li>
                 </Link> 
 
 
-                <li> User Account</li>
+                <li style = {navStyle}> User Account</li>
             </ul>
         </nav>
     );

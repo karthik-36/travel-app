@@ -4,7 +4,7 @@ import React from 'react';
 import Nav from './components/Nav';
 import ManageFunds from './components/ManageFunds';
 import Trips from './components/Trips';
-import { BrowserRouter, Switch, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Routes, Route , Navigate} from 'react-router-dom';
 
 
 function App() {
@@ -25,8 +25,9 @@ function App() {
       <div className="App">
 
         <Nav />
-      
-          <Routes>
+ 
+            <Routes>
+            <Route path="/travel-app/" element={<Trips />} />
             <Route path="/travel-app/Trips" element={<Trips />} />
             <Route path="/travel-app/ManageFunds" element={<ManageFunds />} />
           </Routes>

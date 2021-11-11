@@ -1,0 +1,17 @@
+[
+  {
+    "tripName": "Trip to New York",
+    "id": 1,
+    "img" : "https://media.istockphoto.com/photos/the-statue-of-liberty-with-the-one-world-trade-building-center-over-picture-id1169074379?k=20&m=1169074379&s=612x612&w=0&h=weuMjib73CU2dboPcjaiPr1bl5zk0YtviocdSka-ZeA=",
+    "description" : "My wonderful trip to new York",
+    "date" : "Sept 14, 2016"
+  },
+  {
+    "tripName": "Trip to Paris",
+    "id": 2,
+    "img" : "https://images.unsplash.com/photo-1549144511-f099e773c147?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXMlMjBmcmFuY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    "description" : "City of love",
+    "date" : "Aug 19, 2018"
+  }
+
+]

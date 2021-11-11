@@ -19,6 +19,10 @@ function Nav() {
      
             <img style = {logoStyle} src = {logo} />
             <ul className="navlinks">
+
+
+                
+
                  <Link style = {navStyle}  to = "/travel-app/Trips" > 
                 <li> Trips</li>
                 </Link>

@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "Air france",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/300px-Air_France_Logo.svg.png",
+        "departureTime": "6:50 pm",
+        "arrivalTime": "8:15 pm",
+        "duration": "3 hr 55min",
+        "departureAirport": "ORD",
+        "arrivalAirport": "DEL",
+        "price": "$1083",
+        "stopsCount": 1,
+        "stops": "NY"
+    },
+    {
+        "id": 2,
+        "name": "Emirates",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/150px-Emirates_logo.svg.png",
+        "departureTime": "2:00 pm",
+        "arrivalTime": "8:10 pm",
+        "duration": "16hr 10min",
+        "departureAirport": "ORD",
+        "arrivalAirport": "LAS",
+        "price": "$1800",
+        "stopsCount": 0,
+        "stops": ""
+    },
+    {
+        "id": 3,
+        "name": "Royal Air Maroc",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Royal_Air_Maroc_logo.svg/150px-Royal_Air_Maroc_logo.svg.png",
+        "departureTime": "8:00 am",
+        "arrivalTime": "2:30 pm",
+        "duration": "18hr 15min",
+        "departureAirport": "JFK",
+        "arrivalAirport": "LAS",
+        "price": "$1250",
+        "stopsCount": 2,
+        "stops": "JFK, SNA"
+    }
+]

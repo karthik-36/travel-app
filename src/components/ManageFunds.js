@@ -5,7 +5,7 @@ import React from 'react';
 function ManageFunds() {
   return (
     <div> 
-         <h1>ManageFunds</h1>
+         <h1>Manage Funds</h1>
     </div>
   );
 }

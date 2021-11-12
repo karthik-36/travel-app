@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import ManageFunds from './components/ManageFunds';
 import Trips from './components/Trips';
 import { BrowserRouter, Switch, Routes, Route , Navigate} from 'react-router-dom';
+import back from './images/back.jpg';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
 
     <BrowserRouter>
-      <div className="App">
+      <div style = {{background : back}} className="App">
 
         <Nav />
  

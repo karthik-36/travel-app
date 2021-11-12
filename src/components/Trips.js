@@ -1,6 +1,7 @@
 
 import * as React from 'react';
 import travelData from '../data/travelCards.json';
+import reccData from '../data/recommendCards.json';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -46,8 +47,10 @@ const ExpandMore = styled((props) => {
 
 function Trips() {
     const [cards, setCards] = useState();
+    const [reccCards, setReccCards] = useState();
     useEffect(() => {
         setCards(travelData);
+        setReccCards(reccData);
     });
 
 
@@ -59,73 +62,73 @@ function Trips() {
     return (
         <div>
 
-        <Grid container spacing={1}>
+            <Grid className="mainGrid" container spacing={1}>
 
 
-         
-            {cards ? (
-                cards.map((element) => {
-                    return (
 
-                        <>
-                            <Card sx={{ maxWidth: 245 , minWidth: 245, margin: '25px 35px' }}>
-                                <CardHeader
-                                    avatar={
-                                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                            R
-                                        </Avatar>
-                                    }
+                {cards ? (
+                    cards.map((element) => {
+                        return (
 
-                                    title={<b> {element.tripName} </b>}
-                                    subheader={element.date}
-                                />
-                                <CardMedia
-                                    component="img"
-                                    height="194"
-                                    image={element.img}
-                                    alt="Paella dish"
-                                />
-                                <CardContent>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {element.description}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions disableSpacing>
-                                    <IconButton aria-label="share">
-                                        <ShareIcon />
-                                    </IconButton>
-                                    <IconButton aria-label="settings">
-                                        <MoreVertIcon />
-                                    </IconButton>
+                            <>
+                                <Card sx={{ maxWidth: 245, minWidth: 245, margin: '25px 35px' }}>
+                                    <CardHeader
+                                        avatar={
+                                            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                                R
+                                            </Avatar>
+                                        }
 
-                                </CardActions>
-                            </Card>
+                                        title={<b> {element.tripName} </b>}
+                                        subheader={element.date}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        height="194"
+                                        image={element.img}
+                                        alt="Paella dish"
+                                    />
+                                    <CardContent>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {element.description}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions disableSpacing>
+                                        <IconButton aria-label="share">
+                                            <ShareIcon />
+                                        </IconButton>
+                                        <IconButton aria-label="settings">
+                                            <MoreVertIcon />
+                                        </IconButton>
 
-                        </>)
+                                    </CardActions>
+                                </Card>
 
-                }))
+                            </>)
 
-                : (<h1> no data </h1>)}
+                    }))
+
+                    : (<h1> no data </h1>)}
 
 
-            <Card sx={{ maxWidth: 245, minWidth: 245,  margin: '25px 35px' }}>
-                <CardHeader
-                
-                    title={<b> ADD NEW TRIP </b>}
-                    subheader="-"
-                />
-                <CardMedia
-                    component="img"
-                    height="224"
-                    image="https://cdn1.iconfinder.com/data/icons/ui-glynh-01-of-5/100/UI_Glyph_1-02-512.png"
-                    alt="Paella dish"
-                />
-                <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                        Your next trip here
-                    </Typography>
-                </CardContent>
-                {/* <CardActions disableSpacing>
+                <Card sx={{ maxWidth: 245, minWidth: 245, margin: '25px 35px' }}>
+                    <CardHeader
+
+                        title={<b> ADD NEW TRIP </b>}
+                        subheader="-"
+                    />
+                    <CardMedia
+                        component="img"
+                        height="224"
+                        image="https://cdn1.iconfinder.com/data/icons/ui-glynh-01-of-5/100/UI_Glyph_1-02-512.png"
+                        alt="Paella dish"
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                            Your next trip here
+                        </Typography>
+                    </CardContent>
+                    {/* <CardActions disableSpacing>
                     <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
@@ -134,10 +137,61 @@ function Trips() {
                     </IconButton>
 
                 </CardActions> */}
-            </Card>
+                </Card>
 
             </Grid>
 
+
+
+
+
+                
+            <h2 style = {{textAlign : 'left' , marginLeft : '2%' , color : 'white' }}> <span style = {{ backgroundColor : '#5c6a9b' , padding : '0px 20px 4px' , borderRadius : '6px'}}> Recommended getaways from Chicago </span></h2>
+
+            <Grid className="ReccGrid" container spacing={1}>
+
+
+                {reccCards ? (
+                    reccCards.map((element) => {
+                        return (
+
+                            <>
+                                <Card className = "card" sx={{ maxWidth: 245, minWidth: 245, margin: '25px 35px' }}>
+                                    <CardHeader
+                                    
+
+                                        title={<b> {element.tripName} </b>}
+                                      
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        height="194"
+                                        image={element.img}
+                                        alt="Paella dish"
+                                    />
+                                    <CardContent>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {element.description}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions disableSpacing>
+                                        {/* <IconButton aria-label="share">
+                                            <ShareIcon />
+                                        </IconButton>
+                                        <IconButton aria-label="settings">
+                                            <MoreVertIcon />
+                                        </IconButton> */}
+
+                                    </CardActions>
+                                </Card>
+
+                            </>)
+
+                    }))
+
+                    : (<h1> no data </h1>)}
+
+            </Grid>
 
 
 

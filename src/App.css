@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: lightblue url("https://media.istockphoto.com/photos/light-teal-defocused-blurred-motion-abstract-background-picture-id1138286481?k=20&m=1138286481&s=612x612&w=0&h=ydTDA5dCLVvJ_D6rvbAf5frQrZfolWAINYHVloU7P1Y=") no-repeat fixed center ;
+  background-size: 100% 100%;
 }
 
 nav{
@@ -9,12 +11,14 @@ nav{
   align-items: center;
   min-height: 8.5vh;
   background-color: rgba(241, 251, 252, 1);
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid rgb(71, 71, 71);
   
 
 }
 
-
+.card{
+  /* background-color: black !important;  */
+} 
 
 
 .navlinks{
@@ -24,4 +28,15 @@ nav{
   list-style: none;
   align-items: center;
 }
+
+.mainGrid{
+  padding-bottom: 40px;
+  border-bottom: 2px solid grey;
+}
+
+.ReccGrid{
+  padding-bottom: 9.5%;
+  border-bottom: 2px solid grey;
+}
+
 

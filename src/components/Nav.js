@@ -5,7 +5,16 @@ import logo from '../images/logo.JPG';
 function Nav() {
 
 
+    
     const navStyle = {
+        fontSize : '24px',
+        fontWeight : 'bold',
+        textDecoration: 'none',
+        background : 'white',
+        padding : '1.8vh',
+        borderRadius : '29px'
+      }
+    const navStyle2 = {
         fontSize : '24px',
         fontWeight : 'bold',
         textDecoration: 'none'
@@ -28,11 +37,11 @@ function Nav() {
                 </Link>
 
                 <Link style = {navStyle}  to = "/travel-app/ManageFunds"> 
-                <li> ManageFunds</li>
+                <li> Manage Funds</li>
                 </Link> 
 
 
-                <li style = {navStyle}> User Account</li>
+                <li style = {navStyle2}> user account</li>
             </ul>
         </nav>
     );

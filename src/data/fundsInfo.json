@@ -1,0 +1,18 @@
+[
+    {
+      "tripName": "Trip to New York",
+      "id": 1,
+      "people" : ["Karthik", "Jake", "Tishay", "Garima", "Jakob"],
+      "ledger" : [{"date": "Oct 19, 2021", "reason":"Karthik paid for travel", "amount":"$32"},
+                  {"date": "Oct 18, 2021", "reason":"Garima paid for Tishay's haircut", "amount":"--"},
+                  {"date": "Oct 18, 2021", "reason":"Tishay paid for lunch", "amount":"$12"}]
+    },
+    {
+      "tripName": "Trip to Paris",
+      "id": 2,
+      "people" : ["Jakob", "Jake"],
+      "ledger" : [{"date": "Sept 1, 2021", "reason":"Jake paid for Eiffel Tower ticket", "amount":"$30"}]
+    }
+  
+  ]
+  

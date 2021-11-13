@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+ body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+ }
+
+ #formParent {
+   background-color: whitesmoke;
+   border: 8px;
+   margin: 2rem;
+   padding: 2rem;
+ }
+
+ #destination, #origin, #adults, #budget {
+   height: 3rem;
+ }
+
+ #submit {
+   color: white;
+   background-color: cadetblue;
+   height: 3rem;
+   width: 6rem;
+   display: block;
+   margin-left: 50%;
+   margin-top: 20px;
+   border-radius: 14px;
+ }
+
+ #arrowIcon {
+   height: 3rem;
+ }
+
+ #textFieldContainer {
+   display: inline;
+   padding: 16px;
+ }
+
+ #tabFrame {
+   margin-top: 2rem;
+ }
+
+ #flightsContainer {
+   display: flex;
+   flex-direction: row;
+ }
+ #leftPane{
+   background-color:antiquewhite;
+   width: 20%;
+   padding: 20px;
+   border: '10px solid rgba(0, 0, 0, 0.05)'
+ }
+ #mainPane{
+   padding: 20px;
+ }
+
+ #noStopContainer, #oneStopContainer{
+   margin-bottom: 8px;
+ }
+
+ #stopsHeading{
+   font-size: medium;
+   font-weight: bold;
+ }
+
+ #flightCard{
+   margin: 2rem;
+ }
+
+ #flightContainer{
+   display: flex;
+   flex-direction: row;
+ }
+
+ #cardColumn{
+   margin-left: 3rem;
+   margin-right: 3rem;
+ }
+
+ #price{
+   color: green;
+   font-weight: bold;
+ }
+

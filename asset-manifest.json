@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/travel-app/static/css/main.4bb2b4f6.chunk.css",
-    "main.js": "/travel-app/static/js/main.d9eb11b6.chunk.js",
-    "main.js.map": "/travel-app/static/js/main.d9eb11b6.chunk.js.map",
-    "runtime-main.js": "/travel-app/static/js/runtime-main.5b0b8ac0.js",
-    "runtime-main.js.map": "/travel-app/static/js/runtime-main.5b0b8ac0.js.map",
-    "static/js/2.f6db69e0.chunk.js": "/travel-app/static/js/2.f6db69e0.chunk.js",
-    "static/js/2.f6db69e0.chunk.js.map": "/travel-app/static/js/2.f6db69e0.chunk.js.map",
-    "static/js/3.9764989a.chunk.js": "/travel-app/static/js/3.9764989a.chunk.js",
-    "static/js/3.9764989a.chunk.js.map": "/travel-app/static/js/3.9764989a.chunk.js.map",
+    "main.css": "/travel-app/static/css/main.52343e7b.chunk.css",
+    "main.js": "/travel-app/static/js/main.40879828.chunk.js",
+    "main.js.map": "/travel-app/static/js/main.40879828.chunk.js.map",
+    "runtime-main.js": "/travel-app/static/js/runtime-main.c4be4160.js",
+    "runtime-main.js.map": "/travel-app/static/js/runtime-main.c4be4160.js.map",
+    "static/js/2.55fa5172.chunk.js": "/travel-app/static/js/2.55fa5172.chunk.js",
+    "static/js/2.55fa5172.chunk.js.map": "/travel-app/static/js/2.55fa5172.chunk.js.map",
+    "static/js/3.49a2359e.chunk.js": "/travel-app/static/js/3.49a2359e.chunk.js",
+    "static/js/3.49a2359e.chunk.js.map": "/travel-app/static/js/3.49a2359e.chunk.js.map",
     "index.html": "/travel-app/index.html",
-    "static/css/main.4bb2b4f6.chunk.css.map": "/travel-app/static/css/main.4bb2b4f6.chunk.css.map",
-    "static/js/2.f6db69e0.chunk.js.LICENSE.txt": "/travel-app/static/js/2.f6db69e0.chunk.js.LICENSE.txt",
+    "static/css/main.52343e7b.chunk.css.map": "/travel-app/static/css/main.52343e7b.chunk.css.map",
+    "static/js/2.55fa5172.chunk.js.LICENSE.txt": "/travel-app/static/js/2.55fa5172.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/travel-app/static/media/logo.6ce24c58.svg",
     "static/media/logo.9e80256a.JPG": "/travel-app/static/media/logo.9e80256a.JPG"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b0b8ac0.js",
-    "static/js/2.f6db69e0.chunk.js",
-    "static/css/main.4bb2b4f6.chunk.css",
-    "static/js/main.d9eb11b6.chunk.js"
+    "static/js/runtime-main.c4be4160.js",
+    "static/js/2.55fa5172.chunk.js",
+    "static/css/main.52343e7b.chunk.css",
+    "static/js/main.40879828.chunk.js"
   ]
 }

@@ -68,7 +68,7 @@ const FlightsTab = () => {
                                     <div>
                                         <Card id="flightCard">
                                             <div id="flightContainer">
-                                            <img src={item.img} height="100px" width="100px" />
+                                                <img src={item.img} height="100px" width="100px" />
                                                 <div id="cardColumn">
                                                     <p> {item.departureTime} - {item.arrivalTime}</p>
                                                     <h4> {item.name}</h4>

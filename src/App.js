@@ -11,16 +11,6 @@ import back from './images/back.jpg';
 function App() {
   return (
 
-    //   <BrowserRouter>
-
-    //   <Routes>
-    //     <Route path="/" element={<Nav/>}>
-    //       <Route path="expenses" element={<Trips/>} />
-    //       <Route path="invoices" element={<ManageFunds/>} />
-    //     </Route>
-    //   </Routes>
-    // </BrowserRouter>
-
 
     <BrowserRouter>
       <div style = {{background : back}} className="App">

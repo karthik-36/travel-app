@@ -70,7 +70,7 @@ const TripInfo = () => {
                 <div id="textFieldContainer"> <TextField className="textfield" id="adults" label="Adults" variant="outlined" /> </div>
                 <div id="textFieldContainer"> <TextField className="textfield" id="budget" label="Max Budget" variant="outlined" /> </div>
 
-                <Button id="submit" variant="contained">Let's Go</Button>
+                <Button id="submit" variant="contained" style = {{padding : "4px" , font : "bold"}}>Let's Go</Button>
 
             </form>
         </Card>

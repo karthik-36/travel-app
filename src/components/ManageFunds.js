@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -23,7 +24,12 @@ import Avatar from '@mui/material/Avatar';
 
 import { useEffect, useState } from 'react';
 import { StylesContext } from '@material-ui/styles';
-import { TextField } from '@mui/material';
+import { TextField, InputLabel, FormControl, MenuItem, Select } from '@mui/material';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+    MuiPickersUtilsProvider,
+    KeyboardDatePicker,
+} from '@material-ui/pickers';
 
 const gridStyles = makeStyles({
   container: {
@@ -46,6 +52,116 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+let expenses = [
+{
+  "trip": "N/A",
+  "date": "01/01/1969",
+  "description": "N/A",
+  "amount": "0"
+}
+]
+
+function addRowsFromArray(tripName) {
+  return (expenses.map((expense) => { 
+    if (expense.trip === tripName)
+      return (<TableRow
+          key={expense.description}
+        >
+          <TableCell align="left">{expense.date}</TableCell>
+          <TableCell align="center">{expense.description}</TableCell>
+          <TableCell align="right">{expense.amount}</TableCell>
+        </TableRow>)
+  }))
+}
+
+function addJSONToArray(trip) {
+
+  trip.ledger.forEach(expense => {
+    var newExpense = {
+      "trip": trip.tripName,
+      "date": expense.date,
+      "description": expense.reason,
+      "amount": expense.amount
+    };
+
+    var foundMatch = false;
+    expenses.forEach(ex => {
+      if (ex.description === expense.reason)
+        foundMatch = true;
+    })
+
+    if (!foundMatch)
+      expenses.push(newExpense)
+
+  });
+
+}
+
+
+function addNewExpense() {
+
+  var tripBox = document.getElementById("tripbox-select")
+  var dateBox = document.getElementById("datebox")
+  var descriptionBox = document.getElementById("descbox")
+  var amtBox = document.getElementById("amtbox")
+
+  var tableToModify = document.getElementById("table_" + tripBox.innerHTML)
+
+  expenses.push({
+    "trip": tripBox.innerHTML,
+    "date": dateBox.value,
+    "description": descriptionBox.value,
+    "amount": '$' + amtBox.value
+  })
+
+  expenses = expenses.sort(function(a,b) {
+    return new Date(b.date) - new Date(a.date);
+  })
+
+  ReactDOM.render(addRowsFromArray(tripBox.innerHTML), tableToModify)
+}
+
+const TripPicker = () => {
+  const [tripName, setTripName] = React.useState();
+  const handleTripChange = (name) => {
+    setTripName(name);
+  };
+
+  return (
+    <FormControl id="tripbox" fullWidth style={{paddingLeft:"10px", paddingRight:"10px"}}>
+      <InputLabel id="tripbox-label">Trip</InputLabel>
+      <Select 
+        labelId="tripbox-label"
+        id="tripbox-select" 
+        value={tripName}
+        label="Trip"
+        onChange={handleTripChange}
+        variant="standard"
+      >
+        <MenuItem value={"Trip to New York"}>Trip to New York</MenuItem>
+        <MenuItem value={"Trip to Paris"}>Trip to Paris</MenuItem>
+      </Select>
+    </FormControl>
+  );
+}
+
+const DatePicker = () => {
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
+  const handleDateChange = (date) => {
+      setSelectedDate(date);
+  };
+  return (
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <KeyboardDatePicker
+              format="MM/dd/yyyy"
+              id="datebox"
+              label="Date"
+              value={selectedDate}
+              onChange={handleDateChange}
+          />
+      </MuiPickersUtilsProvider>
+  );
+}
 
 function ManageFunds() {
 
@@ -66,11 +182,12 @@ function ManageFunds() {
             <>
               <ListItem
                 key={trip.id}
-                secondaryAction={
-                  <IconButton edge="end" aria-label="delete">
-                    <DeleteIcon />
-                  </IconButton>
-                }
+                // commenting this out for now, not any use to delete trips here rather than on trip menu
+                // secondaryAction={
+                //   <IconButton edge="end" aria-label="delete">
+                //     <DeleteIcon />
+                //   </IconButton>
+                // }
               >
                 <ListItemText primary={trip.tripName} />
               </ListItem>
@@ -98,11 +215,14 @@ function ManageFunds() {
     <Grid item container direction="column" xs spacing={2}>
       <Grid item xs>
         <div className={useClass.container} >
-          <div align="left" style={{display:"flex", alignItems:"center"}}>
-            <TextField id="outlined-basic" label="Date" variant="outlined"/>
-            <TextField id="outlined-basic" label="Description" variant="outlined"/>
-            <TextField id="outlined-basic" label="Amount" variant="outlined"/>
-            <Button variant="contained">Add Expense</Button>
+          <div align="left" style={{display:"flex", alignItems:"center", paddingTop:"10px", margin:"5px"}}>
+            <TripPicker />
+          </div>
+          <div align="left" style={{display:"flex", alignItems:"center", paddingTop:"10px", margin:"5px"}}>
+            <DatePicker />
+            <TextField id="descbox" label="Description" variant="standard" style={{marginLeft:"10px", marginRight:"10px"}}/>
+            <TextField type="number" id="amtbox" label="Amount" variant="standard" style={{marginLeft:"10px", marginRight:"10px"}}/>
+            <Button variant="contained" onClick={addNewExpense}>Add Expense</Button>
           </div>
         </div>
       </Grid>
@@ -113,23 +233,19 @@ function ManageFunds() {
                 {trips ? (
                   trips.map((trip) => (
                     <>
+                      {addJSONToArray(trip)}
                       <TableHead>
                         <TableRow>
-                          <StyledTableCell align="left" colSpan={3}>
+                          <StyledTableCell align="left" colSpan={2}>
                             {trip.tripName}
+                          </StyledTableCell>
+                          <StyledTableCell align="right" colSpan={1}>
+                            You Owe:
                           </StyledTableCell>
                         </TableRow>
                       </TableHead>
-                      <TableBody>
-                        {trip.ledger.map((expense) => (
-                          <TableRow
-                            key={expense.date}
-                          >
-                            <TableCell align="left">{expense.date}</TableCell>
-                            <TableCell align="center">{expense.reason}</TableCell>
-                            <TableCell align="right">{expense.amount}</TableCell>
-                          </TableRow>
-                        ))}
+                      <TableBody id={"table_" + trip.tripName}>
+                        {addRowsFromArray(trip.tripName)}
                       </TableBody>
                     </>
                   ))

@@ -189,8 +189,8 @@ const HotelsTab = () => {
   return (<div>
     <Grid container direction="row" spacing={2} justifyContent="center"
     >
-      <Grid style={{ height: "100vh", background: "white", borderRadius: "5px", marginTop: "12px" }} item xs={3}>
-        <FormControl component="fieldset">
+      <Grid style={{ height: "100vh", background: "white", borderRadius: "5px", marginTop: "12px"  }} item xs={3}>
+        <FormControl  component="fieldset">
           <FormLabel component="legend"><b>Sort hotel by</b></FormLabel>
           <RadioGroup
             aria-label="Sort by"

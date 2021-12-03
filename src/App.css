@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: lightblue url("http://shepherdscenterofhamiltoncounty.org/wp-content/uploads/2015/05/abstract-background-white.jpg") no-repeat fixed center ;
+  background: rgb(228, 245, 213)  url("http://shepherdscenterofhamiltoncounty.org/wp-content/uploads/2015/05/abstract-background-white.jpg") no-repeat fixed center ;
   background-size: 100% 100%;
 }
 

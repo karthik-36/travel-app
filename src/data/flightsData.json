@@ -32,8 +32,8 @@
         "departureTime": "8:00 am",
         "arrivalTime": "2:30 pm",
         "duration": "18hr 15min",
-        "departureAirport": "JFK",
-        "arrivalAirport": "LAS",
+        "departureAirport": "ORD",
+        "arrivalAirport": "YYZ",
         "price": "$1250",
         "stopsCount": 2,
         "stops": "JFK, SNA"

@@ -140,6 +140,52 @@ const HotelsTab = () => {
     setPosition(position);
   }
 
+  function handleChangeRadio(e) {
+
+    console.log(e.target.value);
+    let newHotels = [];
+    if(e.target.value == "Price"){
+      
+      newHotels = hotels.sort((a,b) => {
+        return a.ratePlan.price.exactCurrent - b.ratePlan.price.exactCurrent;
+
+        
+      }) 
+
+      console.log("newHotels");
+      console.log(newHotels);
+      setHotels(newHotels.map((x,i) => { return newHotels[i]; }));
+
+    }
+    else if(e.target.value == "Vacancy"){
+
+      newHotels = hotels.sort((a,b) => {
+        if(!b.roomsLeft){
+          b.roomsLeft = 7;
+        }
+        return b.roomsLeft - a.roomsLeft;
+      }) 
+
+      console.log("newHotels");
+      console.log(newHotels);
+      setHotels(newHotels.map((x,i) => { return newHotels[i]; }));
+    }
+    else if(e.target.value == "Star Rating"){
+
+      newHotels = hotels.sort((a,b) => {
+        return b.starRating - a.starRating;
+      }) 
+
+      console.log("newHotels");
+      console.log(newHotels);
+      setHotels(newHotels.map((x,i) => { return newHotels[i]; }));
+    }
+    
+
+
+  //  this.setState({ selected: ev.target.value });
+  };
+
   return (<div>
     <Grid container direction="row" spacing={2} justifyContent="center"
     >
@@ -150,6 +196,7 @@ const HotelsTab = () => {
             aria-label="Sort by"
             defaultValue="Star Rating"
             name="radio-buttons-group"
+            onChange={handleChangeRadio}
           >
             <FormControlLabel value="Star Rating" control={<Radio />} label="Star Rating" />
             <FormControlLabel value="Price" control={<Radio />} label="Price" />

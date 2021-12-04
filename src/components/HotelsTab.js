@@ -203,7 +203,6 @@ const HotelsTab = () => {
             <FormControlLabel value="Vacancy" control={<Radio />} label="Vacancy" />
           </RadioGroup>
         </FormControl>
-
       </Grid>
 
       <Grid item xs={6}>

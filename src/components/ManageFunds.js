@@ -30,6 +30,7 @@ import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
+import { Delete } from '@mui/icons-material';
 
 const gridStyles = makeStyles({
   container: {
@@ -70,8 +71,20 @@ function addRowsFromArray(tripName) {
           <TableCell align="left">{expense.date}</TableCell>
           <TableCell align="center">{expense.description}</TableCell>
           <TableCell align="right">{expense.amount}</TableCell>
+          <TableCell align="right">
+            <IconButton>
+              <DeleteIcon onClick={removeExpense(expense.description)}></DeleteIcon>
+            </IconButton>
+          </TableCell>
         </TableRow>)
   }))
+}
+
+function removeExpense(i) {
+  const newExpense = [...expenses];
+
+  newExpense.splice(i, 1);
+
 }
 
 function addJSONToArray(trip) {
@@ -241,6 +254,9 @@ function ManageFunds() {
                           </StyledTableCell>
                           <StyledTableCell align="right" colSpan={1}>
                             You Owe:
+                          </StyledTableCell>
+                          <StyledTableCell align="right" colSpan={1}>
+                            
                           </StyledTableCell>
                         </TableRow>
                       </TableHead>

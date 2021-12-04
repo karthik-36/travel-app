@@ -1,20 +1,52 @@
 import React from "react";
 import { Checkbox } from "@mui/material";
 import allAirlinesData from '../data/airlines.json';
-import flightsData from '../data/flightsData.json'
+import data from '../data/flightsData.json'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import { useEffect, useState } from 'react';
 
 
 
+var flightsData = data
 const FlightsTab = () => {
-    const [allAirlines, setAllairlines] = useState();
-    const [flights, setFlights] = useState();
+    const [allAirlines, setAllairlines] = useState(allAirlinesData);
+    const [flights, setFlights] = useState(flightsData);
+
+    const handleAirlineCheck = (val, isChecked) =>{
+        // console.log("Tise==> checkbox clicked "+val+" "+isChecked)
+
+        // console.log("Tise==> "+JSON.stringify(flightsData))
+        if (!isChecked){
+            var newData = []
+            for (var flight in flightsData){
+                if (flightsData[flight]["name"] != val){
+                    newData.push(flightsData[flight])
+                }
+            }
+            flightsData = newData
+            setFlights(newData)
+        }
+        else{
+            console.log("Tise adding "+val)
+            var newData = Array.from(flightsData)
+            for (var flight in data){
+                if (data[flight]["name"] == val){
+                    console.log("Tise found "+val)
+                    newData.push(data[flight])
+                }
+            }
+            // console.log("Tise newdata is "+JSON.stringify(newData))
+            flightsData = newData
+            setFlights(flightsData)
+        }
+        
+    }
+
     useEffect(() => {
-        setAllairlines(allAirlinesData);
+        console.log("Tise==> useEffect called ")
         setFlights(flightsData)
-    });
+    }, [flightsData]);
     return (
         <div id="flightsContainer">
             <div id="leftPane">
@@ -44,7 +76,7 @@ const FlightsTab = () => {
                             allAirlines.map((item, key) => {
                                 return (
                                     <div>
-                                        <Checkbox id={"flight" + key} defaultChecked />
+                                        <Checkbox onChange={(e)=>handleAirlineCheck(item, e.target.checked)} id={"flight" + key} defaultChecked />
                                         <label id="noStopLabel">
                                             {item}
                                         </label>
@@ -68,7 +100,7 @@ const FlightsTab = () => {
                                     <div>
                                         <Card id="flightCard">
                                             <div id="flightContainer">
-                                            <img src={item.img} height="100px" width="100px" />
+                                                <img src={item.img} height="100px" width="100px" />
                                                 <div id="cardColumn">
                                                     <p> {item.departureTime} - {item.arrivalTime}</p>
                                                     <h4> {item.name}</h4>

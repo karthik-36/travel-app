@@ -1,24 +1,28 @@
 {
   "files": {
     "main.css": "/travel-app/static/css/main.e66d089c.chunk.css",
-    "main.js": "/travel-app/static/js/main.edec9408.chunk.js",
-    "main.js.map": "/travel-app/static/js/main.edec9408.chunk.js.map",
-    "runtime-main.js": "/travel-app/static/js/runtime-main.93f6b01e.js",
-    "runtime-main.js.map": "/travel-app/static/js/runtime-main.93f6b01e.js.map",
-    "static/js/2.c8dabd9d.chunk.js": "/travel-app/static/js/2.c8dabd9d.chunk.js",
-    "static/js/2.c8dabd9d.chunk.js.map": "/travel-app/static/js/2.c8dabd9d.chunk.js.map",
-    "static/js/3.cad8fc13.chunk.js": "/travel-app/static/js/3.cad8fc13.chunk.js",
-    "static/js/3.cad8fc13.chunk.js.map": "/travel-app/static/js/3.cad8fc13.chunk.js.map",
+    "main.js": "/travel-app/static/js/main.799ddfb3.chunk.js",
+    "main.js.map": "/travel-app/static/js/main.799ddfb3.chunk.js.map",
+    "runtime-main.js": "/travel-app/static/js/runtime-main.e32604b4.js",
+    "runtime-main.js.map": "/travel-app/static/js/runtime-main.e32604b4.js.map",
+    "static/css/2.58a45539.chunk.css": "/travel-app/static/css/2.58a45539.chunk.css",
+    "static/js/2.a21f1f8f.chunk.js": "/travel-app/static/js/2.a21f1f8f.chunk.js",
+    "static/js/2.a21f1f8f.chunk.js.map": "/travel-app/static/js/2.a21f1f8f.chunk.js.map",
+    "static/js/3.f5f34750.chunk.js": "/travel-app/static/js/3.f5f34750.chunk.js",
+    "static/js/3.f5f34750.chunk.js.map": "/travel-app/static/js/3.f5f34750.chunk.js.map",
     "index.html": "/travel-app/index.html",
+    "static/css/2.58a45539.chunk.css.map": "/travel-app/static/css/2.58a45539.chunk.css.map",
     "static/css/main.e66d089c.chunk.css.map": "/travel-app/static/css/main.e66d089c.chunk.css.map",
-    "static/js/2.c8dabd9d.chunk.js.LICENSE.txt": "/travel-app/static/js/2.c8dabd9d.chunk.js.LICENSE.txt",
+    "static/js/2.a21f1f8f.chunk.js.LICENSE.txt": "/travel-app/static/js/2.a21f1f8f.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/travel-app/static/media/logo.6ce24c58.svg",
-    "static/media/logo.9e80256a.JPG": "/travel-app/static/media/logo.9e80256a.JPG"
+    "static/media/logo.9e80256a.JPG": "/travel-app/static/media/logo.9e80256a.JPG",
+    "static/media/pro.09317ca1.JPG": "/travel-app/static/media/pro.09317ca1.JPG"
   },
   "entrypoints": [
-    "static/js/runtime-main.93f6b01e.js",
-    "static/js/2.c8dabd9d.chunk.js",
+    "static/js/runtime-main.e32604b4.js",
+    "static/css/2.58a45539.chunk.css",
+    "static/js/2.a21f1f8f.chunk.js",
     "static/css/main.e66d089c.chunk.css",
-    "static/js/main.edec9408.chunk.js"
+    "static/js/main.799ddfb3.chunk.js"
   ]
 }

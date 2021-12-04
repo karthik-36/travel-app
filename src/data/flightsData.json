@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Air france",
+        "name": "Air France",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/300px-Air_France_Logo.svg.png",
         "departureTime": "6:50 pm",
         "arrivalTime": "8:15 pm",
@@ -27,15 +27,54 @@
     },
     {
         "id": 3,
-        "name": "Royal Air Maroc",
-        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Royal_Air_Maroc_logo.svg/150px-Royal_Air_Maroc_logo.svg.png",
-        "departureTime": "8:00 am",
-        "arrivalTime": "2:30 pm",
+        "name": "American Airlines",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/American_Airlines_logo_2013.svg/450px-American_Airlines_logo_2013.svg.png",
+        "departureTime": "4:00 am",
+        "arrivalTime": "12:30 pm",
         "duration": "18hr 15min",
-        "departureAirport": "JFK",
-        "arrivalAirport": "LAS",
+        "departureAirport": "ORD",
+        "arrivalAirport": "YYZ",
         "price": "$1250",
         "stopsCount": 2,
-        "stops": "JFK, SNA"
+        "stops": "AOR, SNA"
+    },
+    {
+        "id": 4,
+        "name": "Air India",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Air_India_Logo.svg/375px-Air_India_Logo.svg.png",
+        "departureTime": "7:27 pm",
+        "arrivalTime": "6:30 am",
+        "duration": "18hr 15min",
+        "departureAirport": "ORD",
+        "arrivalAirport": "BME",
+        "price": "$1250",
+        "stopsCount": 2,
+        "stops": "AAR, SNA"
+    },
+    {
+        "id": 5,
+        "name": "United Airlines",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/United_Airlines_Logo.svg/450px-United_Airlines_Logo.svg.png",
+        "departureTime": "9:24 am",
+        "arrivalTime": "2:30 pm",
+        "duration": "18hr 15min",
+        "departureAirport": "ORD",
+        "arrivalAirport": "BGI",
+        "price": "$1250",
+        "stopsCount": 2,
+        "stops": "JFK, LAS"
+    },
+    {
+        "id": 6,
+        "name": "Royal Air Maroc",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Royal_Air_Maroc_logo.svg/150px-Royal_Air_Maroc_logo.svg.png",
+        "departureTime": "8:12 am",
+        "arrivalTime": "2:43 pm",
+        "duration": "18hr 15min",
+        "departureAirport": "ORD",
+        "arrivalAirport": "ZSA",
+        "price": "$1250",
+        "stopsCount": 2,
+        "stops": "JFK, AES"
     }
 ]

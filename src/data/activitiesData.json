@@ -1,49 +1,49 @@
 [
     {
         "id": 1,
+        "name": "The Art Institute of Chicago",
+        "image": "https://news.artnet.com/app/news-upload/2020/05/GettyImages-1211538923-1024x675.jpg",
+        "price": "$15/person",
+        "rating": 4.8
+    },
+    {
+        "id": 2,
+        "name": "The Cheesecake Factory",
+        "image": "https://cdn.vox-cdn.com/thumbor/gU-5FpsLcXFWk01eVtiBvHOt7EI=/0x0:3457x2400/1400x1050/filters:focal(1332x350:1884x902):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/66680054/142585668.jpg.0.jpg",
+        "price": "Need reservation",
+        "rating": 4.2
+    },
+    {
+        "id": 3,
+        "name": "Six flags Great America",
+        "image": "https://www.enjoyillinois.com/assets/Tourism-Operators/images/GoliathTOM.jpg",
+        "price": "$50/person",
+        "rating": 4.4
+    },
+    
+    
+    {
+        "id": 4,
         "name": "The Bean",
         "image": "https://blogmedia.localize.city/blog/wp-content/uploads/2020/08/what-is-cloud-gate-in-chicago.jpg",
-        "price": "Free",
+        "price": "Free for everyone",
         "rating": 4.8
     }
 ,
 {
-    "id": 2,
+    "id": 5,
     "name": "360 Chicago TILT",
     "image": "https://www.enjoyillinois.com/assets/Tourism-Operators/images/Tilt360Chicago.JPG",
     "price": "$30/person",
     "rating": 4.6
 },
 {
-    "id": 3,
+    "id": 6,
     "name": "Navy Pier ferris wheel",
     "image": "https://media.timeout.com/images/103930350/image.jpg",
     "price": "$20/person",
     "rating": 4.6
-},
-{
-    "id": 4,
-    "name": "The Art Institute of Chicago",
-    "image": "https://news.artnet.com/app/news-upload/2020/05/GettyImages-1211538923-1024x675.jpg",
-    "price": "$15/person",
-    "rating": 4.8
-},
-{
-    "id": 5,
-    "name": "The Cheesecake Factory",
-    "image": "https://cdn.vox-cdn.com/thumbor/gU-5FpsLcXFWk01eVtiBvHOt7EI=/0x0:3457x2400/1400x1050/filters:focal(1332x350:1884x902):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/66680054/142585668.jpg.0.jpg",
-    "price": "Need reservation",
-    "rating": 4.2
-},
-{
-    "id": 6,
-    "name": "Six flags Great America",
-    "image": "https://www.enjoyillinois.com/assets/Tourism-Operators/images/GoliathTOM.jpg",
-    "price": "$50/person",
-    "rating": 4.4
 }
-
-
 
 
 ]

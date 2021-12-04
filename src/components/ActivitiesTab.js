@@ -64,27 +64,36 @@ const ActivitiesTab = () => {
                         (activities ?
                             activities.map((item, key) => {
                                 return (
-                                    <div class="Row">
-                                        <Card id="activityCard" width="2000px" height="100px" spacing="10px" >
-                                            <div class="container">
-                                                <img src={item.image} height="150px" width="200px" />
-                                                <div id="text">
-                                                    <h4> {item.name}</h4>
-                                                </div>
-                                                <div>
-                                                    <StarRatings
-                                                        rating={item.rating}
-                                                        starRatedColor="orange"
-                                                        starDimension="20px"
-                                                        starSpacing="5px"
-                                                    />
-                                                    <p>{item.rating}</p>
+                                    <div >
+                                        <Card id="activityCard"  >
+                                           
+                                            <Grid
+                                                container
+                                                direction="row"
+                                                justifyContent="center"
+                                                rowSpacing={5}
+                                                alignItems="center" >
+                                                    <img src={item.image} height="150px" width="200px" />
+                                                    <div id="text">
+                                                        <h4> {item.name}</h4>
+                                                    </div>
+                                                    <div id="cardColumn">
+                                                        <span> <p id="price"> {item.price}</p> </span>
+                                                    </div>
+                                                    <div>
+                                                        <StarRatings
+                                                            rating={item.rating}
+                                                            starRatedColor="orange"
+                                                            starDimension="20px"
+                                                            starSpacing="5px"
+                                                        />
+                                                        <p>{item.rating}</p>
+                                                        
+                                                    </div>
                                                     
-                                                </div>
-                                                <div id="cardColumn">
-                                                    <span> <p id="price"> {item.price}</p> </span>
-                                                </div>
-                                            </div>
+
+                                                </Grid>
+                                        
                                         </Card>
                                     </div>
                                 )

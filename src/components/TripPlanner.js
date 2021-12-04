@@ -43,11 +43,12 @@ const TripPlanner = props => {
         <>
             <TripInfo />
             <div id="tabFrame">
-                <Tabs value={selectedTab} onChange={handleChange}>
-                    <Tab label="Flights" icon={<FaPlane/>} />
-                    <Tab label="Hotels" icon={<FaHotel/>}/>
-                    <Tab label="Activities" icon={<FaBasketballBall/>}/>
+                <Tabs variant="fullWidth" style = {{fontWeight : "bold" , backgroundColor : "rgb(120,255,167)"  , textAlign : "center" , justifyContent : "center" , borderTopLeftRadius : "40px" , borderTopRightRadius : "40px" }} value={selectedTab} onChange={handleChange}>
+                    <Tab style = {{fontWeight : "bold" }} label="Flights" icon={<FaPlane/>} />
+                    <Tab style = {{fontWeight : "bold" }} label="Hotels" icon={<FaHotel/>}/>
+                    <Tab style = {{fontWeight : "bold" }} label="Activities" icon={<FaBasketballBall/>}/>
                 </Tabs>
+            
                 {selectedTab === 0 && <FlightsTab />}
                 {selectedTab === 1 && <HotelsTab />}
                 {selectedTab === 2 && <ActivitiesTab />}
@@ -70,7 +71,7 @@ const TripInfo = () => {
                 <div id="textFieldContainer"> <TextField className="textfield" id="adults" label="Adults" variant="outlined" /> </div>
                 <div id="textFieldContainer"> <TextField className="textfield" id="budget" label="Max Budget" variant="outlined" /> </div>
 
-                <Button id="submit" variant="contained" style = {{padding : "4px" , font : "bold"}}>Let's Go</Button>
+                <Button id="submit" variant="contained" style = {{color : "black", padding : "4px" , font : "bold" , background: "rgb(30,255,147)"}}><b>Let's Go</b></Button>
 
             </form>
         </Card>

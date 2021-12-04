@@ -6,6 +6,9 @@ import ManageFunds from './components/ManageFunds';
 import Trips from './components/Trips';
 import { BrowserRouter, Switch, Routes, Route , Navigate} from 'react-router-dom';
 import back from './images/back.jpg';
+import TripPlanner from './components/TripPlanner';
+import Home from './components/Home';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -18,8 +21,9 @@ function App() {
         <Nav />
  
             <Routes>
-            <Route path="/travel-app/" element={<Trips />} />
-            <Route path="/travel-app/Trips" element={<Trips />} />
+            <Route path="/travel-app/" element={<Home />} />
+            <Route path="/travel-app/Home" element={<Home />} />
+            <Route path="/travel-app/Trips" element={<TripPlanner />} />
             <Route path="/travel-app/ManageFunds" element={<ManageFunds />} />
           </Routes>
       </div>

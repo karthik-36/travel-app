@@ -21,6 +21,11 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import  Breadcrumbs  from '@mui/material/Breadcrumbs';
+import {useHistory } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
+import { browserHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -59,6 +64,12 @@ function Trips() {
         setReccCards(reccData);
     });
 
+    function  goHome(e) {
+        e.preventDefault();
+        console.log(e);
+        setPageStates('home');
+    }
+
 
     function newTrip(e) {
         e.preventDefault();
@@ -66,6 +77,12 @@ function Trips() {
         setPageStates('trip');
     }
 
+
+    const [ locationKeys, setLocationKeys ] = useState([])
+
+    useEffect(() => {
+  
+      }, [ locationKeys, ])
 
     return (
         <div>
@@ -117,7 +134,11 @@ function Trips() {
     
                             : (<h1> no data </h1>)}
     
-    
+
+                    <Link to="/travel-app/Trips" >
+                   
+             
+         
                         <Card sx={{ maxWidth: 245, minWidth: 245, margin: '25px 35px' }} onClick={newTrip}>
                             <CardHeader
     
@@ -145,6 +166,7 @@ function Trips() {
     
                     </CardActions> */}
                         </Card>
+                        </Link>
     
                     </Grid>
     

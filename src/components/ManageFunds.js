@@ -107,6 +107,9 @@ function addNewExpense() {
 
   var tableToModify = document.getElementById("table_" + tripBox.innerHTML)
 
+  if (tripBox.innerHTML === "" || amtBox.value === "")
+    return
+
   expenses.push({
     "trip": tripBox.innerHTML,
     "date": dateBox.value,

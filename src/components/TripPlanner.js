@@ -128,6 +128,8 @@ const TripPlanner = props => {
         }
         if(count == 0){
             setShow(true);
+        }else{
+            setShow(false);
         }
         
     };

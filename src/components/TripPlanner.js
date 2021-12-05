@@ -88,7 +88,7 @@ const TripPlanner = props => {
                 });
             count++;
         }
-        if(!Number.isInteger(parseInt(adults))){
+        else if(!Number.isInteger(parseInt(adults))){
             toast.error('Adults field should only contain numbers', {
                 position: "bottom-left",
                 autoClose: 5000,
@@ -113,7 +113,7 @@ const TripPlanner = props => {
                 });
             count++;
         }
-        if(!Number.isInteger(parseInt(budget))){
+        else if(!Number.isInteger(parseInt(budget))){
             toast.error('budget can be in dollars only!', {
                 position: "bottom-left",
                 autoClose: 5000,

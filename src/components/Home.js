@@ -29,6 +29,11 @@ import Grid from '@material-ui/core/Grid';
 import locationCard from './Cards';
 import { useEffect, useState } from 'react';
 import TripPlanner from './TripPlanner';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
+
+
 
 
 
@@ -48,6 +53,16 @@ const ExpandMore = styled((props) => {
 
 
 function Home() {
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+  
 
     const [cards, setCards] = useState();
     const [reccCards, setReccCards] = useState();
@@ -112,6 +127,7 @@ function Home() {
                                         <CardActions disableSpacing>
                                             <IconButton aria-label="share">
                                                 <ShareIcon />
+                                                
                                             </IconButton>
                                             <IconButton aria-label="settings">
                                                 <MoreVertIcon />
